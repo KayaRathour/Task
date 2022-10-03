@@ -1,0 +1,22 @@
+<div class="container-fluid" style="display: flex">
+    <div >
+        <app-dynamic1 [shareData]="shareData"></app-dynamic1>
+    </div>
+    <div  style="margin-left:480px ;">
+        <app-dynamic2 [shareData]="shareData"></app-dynamic2>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <input type="text"  [(ngModel)]="shareData" style="margin-left:416px;">
+</div>
+<div style="display: flex;">
+
+
+<span class="col-6">
+    <app-dynamic3 [shareData]="shareData"></app-dynamic3>
+</span>
+<span class="col-6">
+    <app-dynamic4 [shareData]="shareData"></app-dynamic4>
+</span>
+</div>

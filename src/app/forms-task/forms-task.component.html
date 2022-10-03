@@ -1,0 +1,23 @@
+<form [formGroup]="RegForm" (ngSubmit)="submit(RegForm.value)">     
+    <div formArrayName="mobileNumber">
+        <button type="button" (click)="addNumber()" class="btn btn-outline-primary" > Add another Numbers
+  
+        </button>
+        <div  *ngFor="let num of mobileNumber().controls; let i=index" [formGroupName]="i" style="display: flex;">
+    <div class="form-group col-6" >
+      <label for="exampleInputPassword1">Phone Number</label>
+      <input formControlName="mobileNumber" type="number" class="form-control" id="exampleInputPassword1" placeholder="Phone No.">
+      
+    </div>
+    <div class="form-group" style="margin-top: 35px" *ngIf="i>0">
+    <button (click)="remove(i)" class="btn  btn-sm btn-outline-danger" style="margin-left: 15px;"
+      > Remove</button>
+    </div>
+    </div>
+    </div>
+  
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  
+   

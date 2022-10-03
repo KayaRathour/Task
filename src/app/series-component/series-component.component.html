@@ -1,0 +1,11 @@
+<div class="container-fluid">
+    <form>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Insert Index</label>
+            <input type="number" [(ngModel)]="seriesData" [ngModelOptions]="{standalone:true}" class="form-control" id="exampleFormControlTextarea1" aria-describedby="emailHelp" placeholder="Enter Index">
+
+          </div>
+       
+        <button type="submit" class="btn btn-primary" (click)="findSeries()">Submit</button>
+      </form>
+</div>
